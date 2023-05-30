@@ -29,6 +29,28 @@ app.get('/', (req, res) => {
 
     if (username) {
         res.send(`
+            <style>
+            h1{
+                text-align: center;
+                font-weight: 100px;
+            }
+            
+            input, select {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+            
+            input[type=submit] {
+                width: 100%;
+                background-color: blue;
+                color: white;
+            }
+            </style>
             <h1>
                 Hi <span id='username'></span>.
                 Your balance is $${BALANCES[username]}.
@@ -41,6 +63,28 @@ app.get('/', (req, res) => {
         `)
     } else {
         res.send(`
+            <style>
+            h1{
+                text-align: center;
+                font-weight: 100px;
+            }
+            
+            input, select {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+            
+            input[type=submit] {
+                width: 100%;
+                background-color: blue;
+                color: white;
+            }
+            </style>
             <h1>
                 ${source ? `Hi ${source} reader!<br>` : ''}
                 Login to your bank account:
